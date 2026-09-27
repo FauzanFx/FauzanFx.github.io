@@ -14,7 +14,7 @@ gallery:
 ---
 
 ## Project Overview
-Almasena is a semi-autonomous marine trash collector vessel (ROV) built to navigate water bodies and collect surface debris. As the Embedded System Engineer at Gamantaray UGM, I was responsible for the core electrical integration, communication, and control systems of the vessel.
+Almasena is an ROV built to discover underwater's environment using double cameras and do some missions that have been programmed. As the Embedded System Engineer at Gamantaray UGM, I was responsible for the core electrical integration, communication, and control systems of the vessel.
 
 ## Control Systems & Firmware
 To ensure smooth and precise maneuverability in aquatic environments:
