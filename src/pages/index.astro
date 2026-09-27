@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Fauzan Febriansyah | IoT & Embedded Engineer">
+  <main class="max-w-5xl mx-auto px-6 py-12 md:py-24">
+    <!-- HERO SECTION -->
+    <section id="hero" class="flex flex-col md:flex-row items-center gap-12 mb-24">
+      <div class="flex-1 space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Fauzan Febriansyah</span>.
+        </h1>
+        <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+          I'm an undergraduate student in Internet Engineering Technology with a strong focus on 
+          <span class="text-gray-200 font-medium"> digital infrastructure </span>and <span class="text-gray-200 font-medium">IoT development</span>. 
+          I specialize in <span class="text-gray-200 font-medium">networking, embedded systems, and system architecture</span>. 
+          As an adaptable and curious learner, I thrive in multidisciplinary teams to solve complex engineering challenges and build robust technological solutions.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="/CV_Fauzan_Febriansyah.pdf" download="CV_Fauzan_Febriansyah.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold rounded-lg transition-colors flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="px-6 py-3 border border-gray-700 hover:border-gray-500 text-gray-300 rounded-lg transition-colors">
+            View Projects
+          </a>
+          <a href="https://www.linkedin.com/in/fauzan-febriansyah-8269512a2/" target="_blank" rel="noopener noreferrer" class="p-3 bg-gray-800 hover:bg-blue-600 text-gray-300 hover:text-white rounded-lg transition-colors border border-gray-700 hover:border-blue-500" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="w-48 h-48 md:w-72 md:h-72 shrink-0">
+        <!-- Avatar -->
+        <div class="w-full h-full rounded-full border-4 border-gray-800 bg-gray-800 flex items-center justify-center overflow-hidden relative group shadow-2xl">
+          <img src="/images/profile.png" alt="Fauzan Febriansyah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="mb-24">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
+        <span class="text-cyan-400">#</span> Core Competencies
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl hover:border-cyan-500/30 transition-colors">
+          <h3 class="text-lg font-semibold text-white mb-4">Embedded & Hardware</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>STM32, ESP32, Arduino</li>
+            <li>Pixhawk & MAVLink</li>
+            <li>PID Control Systems</li>
+            <li>Sensor Integrations</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl hover:border-cyan-500/30 transition-colors">
+          <h3 class="text-lg font-semibold text-white mb-4">IoT & Networking</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>MQTT, UDP/TCP, HTTP</li>
+            <li>MikroTik Routing (MTCNA)</li>
+            <li>Docker & Kubernetes</li>
+            <li>Linux (Ubuntu)</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800/50 border border-gray-700/50 p-6 rounded-xl hover:border-cyan-500/30 transition-colors">
+          <h3 class="text-lg font-semibold text-white mb-4">Software & Tools</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>C/C++, Python</li>
+            <li>YOLO, OpenCV, Roboflow</li>
+            <li>GitHub & Version Control</li>
+            <li>AI-Agentic Tools (Antigravity, Codex)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section id="projects" class="mb-24">
+      <div class="flex justify-between items-end mb-8">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-cyan-400">#</span> Featured Projects
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <a href="/projects/hydrovia" class="group block bg-gray-800/30 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all">
+          <div class="h-48 bg-gray-700/50 relative flex items-center justify-center overflow-hidden">
+            <img src="/images/hydrovia/WhatsApp Image 2026-09-27 at 22.55.58.jpeg" alt="Hydrovia" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="text-xs font-mono px-2 py-1 bg-cyan-900/40 text-cyan-400 rounded-md">IoT</span>
+              <span class="text-xs font-mono px-2 py-1 bg-gray-700 text-gray-300 rounded-md">ESP32</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Hydrovia Smart Pipe</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">
+              An Industrial IoT system for monitoring water leakage using flow sensors, MQTT telemetry, and a Node-RED dashboard.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="/projects/almasena" class="group block bg-gray-800/30 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all">
+          <div class="h-48 bg-gray-700/50 relative flex items-center justify-center overflow-hidden">
+            <img src="/images/voyager/Main_Picture.JPG" alt="Almasena ROV" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="text-xs font-mono px-2 py-1 bg-cyan-900/40 text-cyan-400 rounded-md">Robotics</span>
+              <span class="text-xs font-mono px-2 py-1 bg-gray-700 text-gray-300 rounded-md">STM32</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Almasena ROV</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">
+              Semi-autonomous marine vessel featuring PID control loops, Pixhawk telemetry, and robust UDP networking.
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="/projects/safara" class="group block bg-gray-800/30 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all">
+          <div class="h-48 bg-gray-700/50 relative flex items-center justify-center overflow-hidden">
+            <img src="/images/safara/WhatsApp Image 2026-09-27 at 23.03.13 (1).jpeg" alt="Safara Gate" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity bg-white" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="text-xs font-mono px-2 py-1 bg-cyan-900/40 text-cyan-400 rounded-md">AI / CV</span>
+              <span class="text-xs font-mono px-2 py-1 bg-gray-700 text-gray-300 rounded-md">YOLO & K8s</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Safara Gate</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">
+              Security checkpoint system enforcing PPE compliance via edge computer vision (YOLO) and IoT hardware.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

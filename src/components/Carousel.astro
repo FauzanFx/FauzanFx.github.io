@@ -1,0 +1,130 @@
+---
+interface Props {
+  youtubeId?: string;
+  gdriveLink?: string;
+  gdriveVideoId?: string;
+  gallery?: string[];
+}
+
+const { youtubeId, gdriveLink, gdriveVideoId, gallery = [] } = Astro.props;
+const hasMedia = youtubeId || gdriveVideoId || gallery.length > 0;
+---
+
+{hasMedia && (
+  <div class="mb-12 bg-gray-800/30 rounded-2xl p-4 md:p-6 border border-gray-800">
+    
+    <!-- Main Viewer -->
+    <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden mb-4 border border-gray-700 shadow-lg" id="carousel-main">
+      {youtubeId ? (
+        <iframe 
+          id="main-video"
+          class="w-full h-full" 
+          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0`} 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      ) : gdriveVideoId ? (
+        <iframe 
+          id="main-video"
+          class="w-full h-full" 
+          src={`https://drive.google.com/file/d/${gdriveVideoId}/preview`} 
+          title="Google Drive video player" 
+          allow="autoplay"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      ) : null}
+      
+      {gallery.length > 0 && (
+         <img 
+            id="main-image" 
+            src={gallery[0]} 
+            class={`w-full h-full object-contain ${(youtubeId || gdriveVideoId) ? 'hidden' : ''}`} 
+            alt="Project Media" 
+         />
+      )}
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent snap-x" id="thumbnails-container">
+      {youtubeId && (
+        <button class="thumbnail-btn shrink-0 w-32 h-20 bg-gray-900 rounded-lg overflow-hidden border-2 border-cyan-500 relative snap-start transition-all" data-type="video">
+          <img src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`} class="w-full h-full object-cover opacity-70 hover:opacity-100" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-8 h-8 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </button>
+      )}
+
+      {gdriveVideoId && (
+        <button class="thumbnail-btn shrink-0 w-32 h-20 bg-gray-800 rounded-lg overflow-hidden border-2 border-cyan-500 relative snap-start transition-all" data-type="video">
+          <div class="w-full h-full flex flex-col items-center justify-center text-cyan-400 opacity-70 hover:opacity-100 bg-gray-900">
+            <svg class="w-8 h-8 mb-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <span class="text-[10px] font-bold tracking-wider">PLAY DEMO</span>
+          </div>
+        </button>
+      )}
+      
+      {gallery.map((img, idx) => (
+        <button class={`thumbnail-btn shrink-0 w-32 h-20 bg-gray-900 rounded-lg overflow-hidden border-2 transition-all snap-start ${!(youtubeId || gdriveVideoId) && idx === 0 ? 'border-cyan-500 opacity-100' : 'border-transparent opacity-50 hover:opacity-100'}`} data-type="image" data-src={img}>
+          <img src={img} class="w-full h-full object-cover" loading="lazy" />
+        </button>
+      ))}
+    </div>
+
+    {gdriveLink && (
+      <div class="mt-6 flex justify-end">
+        <a href={gdriveLink} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-cyan-400 rounded-lg text-sm font-medium transition-colors border border-gray-700">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          View Full Drive Documentation
+        </a>
+      </div>
+    )}
+
+  </div>
+
+  <script>
+    // Astro script scoping: this runs once per page load
+    const setupCarousel = () => {
+      const buttons = document.querySelectorAll('.thumbnail-btn');
+      const mainVideo = document.getElementById('main-video');
+      const mainImage = document.getElementById('main-image');
+
+      if(!buttons.length) return;
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset borders
+          buttons.forEach(b => {
+            b.classList.remove('border-cyan-500', 'opacity-100');
+            b.classList.add('border-transparent', 'opacity-50');
+          });
+          // Set active border
+          btn.classList.add('border-cyan-500', 'opacity-100');
+          btn.classList.remove('border-transparent', 'opacity-50');
+
+          const type = btn.getAttribute('data-type');
+          if (type === 'video' && mainVideo) {
+            mainVideo.classList.remove('hidden');
+            if(mainImage) mainImage.classList.add('hidden');
+            
+            // Auto play logic could go here by appending ?autoplay=1
+          } else if (type === 'image' && mainImage) {
+            if(mainVideo) {
+                mainVideo.classList.add('hidden');
+                // Stop video by resetting src
+                const src = mainVideo.getAttribute('src');
+                mainVideo.setAttribute('src', src); 
+            }
+            mainImage.classList.remove('hidden');
+            mainImage.setAttribute('src', btn.getAttribute('data-src') || '');
+          }
+        });
+      });
+    };
+
+    setupCarousel();
+  </script>
+)}
