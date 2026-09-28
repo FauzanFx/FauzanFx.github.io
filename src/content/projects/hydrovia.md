@@ -13,7 +13,7 @@ gallery:
 ---
 
 ## Project Overview
-Hydrovia is an Industrial IoT (IIoT) system designed to monitor water pipe integrity, track flow rates, and detect leakages in real-time. By utilizing multiple sensors and robust IoT protocols, the system allows for automated mitigation (such as shutting off water pumps) immediately upon detecting anomalies.
+Hydrovia is an Industrial IoT system designed to monitor water pipe integrity, track flow rates, and detect leakages in real-time. By utilizing multiple sensors and robust IoT protocols, the system allows for automated mitigation (such as shutting off water pumps) immediately upon detecting anomalies.
 
 ## Hardware Integration
 The system's core relies on an **ESP32 microcontroller** functioning as the main IoT gateway. 
