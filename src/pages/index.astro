@@ -136,7 +136,161 @@ import Layout from '../layouts/Layout.astro';
             </p>
           </div>
         </a>
+
+        <!-- Project 4 -->
+        <a href="/projects/voyager" class="group block bg-gray-800/30 border border-gray-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all">
+          <div class="h-48 bg-gray-700/50 relative flex items-center justify-center overflow-hidden">
+            <img src="/images/voyager_boat/WhatsApp Image 2026-09-27 at 23.11.11 (1).jpeg" alt="Voyager" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              <span class="text-xs font-mono px-2 py-1 bg-cyan-900/40 text-cyan-400 rounded-md">Robotics</span>
+              <span class="text-xs font-mono px-2 py-1 bg-gray-700 text-gray-300 rounded-md">Arduino & RasPi</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Voyager</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">
+              A semi-autonomous vessel designed for river trash collection using computer vision and remote control.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- SPEAKING & MC SECTION -->
+    <section id="pembicara" class="mb-24">
+      <div class="flex flex-col gap-2 mb-8">
+        <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-cyan-400">#</span> Speaking & MC Experience
+        </h2>
+        <p class="text-gray-400 text-sm">Documentation of my experiences as a speaker and Master of Ceremonies.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative shrink-0">
+            <img src="/images/pembicara/MC Pionir Gadjah Mada.jpeg" alt="MC Pionir Gadjah Mada" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">MC - Pionir Gadjah Mada</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Master of Ceremonies for UGM's official campus orientation event.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative shrink-0">
+            <img src="/images/pembicara/MC Wisuda.jpeg" alt="MC Wisuda" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">MC - Graduation Ceremony</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Hosted the university's graduation ceremony events.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative shrink-0">
+            <img src="/images/pembicara/Pembaca Puisi Peksimiprov UGM.jpeg" alt="Pembaca Puisi Peksimiprov UGM" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">Poetry Reader - Peksimiprov UGM</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Performed poetry reading at the provincial student art week.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 (KMFM Slider with Buttons) -->
+        <image-slider class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 group flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative overflow-hidden shrink-0">
+            <div class="slider-container flex w-full h-full transition-transform duration-300">
+              <img src="/images/pembicara/Pembicara KMFM Nyala 1.jpeg" alt="Pembicara KMFM Nyala 1" class="w-full h-full shrink-0 object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+              <img src="/images/pembicara/Pembicara KMFM Nyala 2.jpeg" alt="Pembicara KMFM Nyala 2" class="w-full h-full shrink-0 object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+            </div>
+            
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+          <div class="p-4 text-center border-t border-gray-800/50 flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">Speaker - KMFM Nyala</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Shared insights and experiences at the KMFM Nyala session.</p>
+          </div>
+        </image-slider>
+
+        <!-- Card 5 (KMK Slider with Buttons) -->
+        <image-slider class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 group flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative overflow-hidden shrink-0">
+            <div class="slider-container flex w-full h-full transition-transform duration-300">
+              <img src="/images/pembicara/Pembicara Public Speaking KMK 2.jpeg" alt="Pembicara Public Speaking KMK 2" class="w-full h-full shrink-0 object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+              <img src="/images/pembicara/Pembicara Public Speaking KMK.jpeg" alt="Pembicara Public Speaking KMK" class="w-full h-full shrink-0 object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+            </div>
+            
+            <button class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 disabled:cursor-not-allowed">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+          <div class="p-4 text-center border-t border-gray-800/50 flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">Speaker - Public Speaking KMK</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Gave training on effective public speaking at KMK.</p>
+          </div>
+        </image-slider>
+
+        <!-- Card 8 -->
+        <div class="bg-gray-800/30 border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-lg hover:shadow-cyan-500/10 flex flex-col">
+          <div class="h-48 bg-gray-700/50 relative shrink-0">
+            <img src="/images/pembicara/Pembicara UKM Selam.png" alt="Pembicara UKM Selam" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-center">
+            <h3 class="font-semibold text-gray-200 text-sm">Speaker - UKM Selam</h3>
+            <p class="text-[11px] text-gray-400 mt-1 leading-tight">Delivered a talk for the University Diving Club.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 </Layout>
+
+<script>
+  class ImageSlider extends HTMLElement {
+    constructor() {
+      super();
+      let currentIndex = 0;
+      const container = this.querySelector('.slider-container');
+      const prevBtn = this.querySelector('.prev-btn');
+      const nextBtn = this.querySelector('.next-btn');
+      
+      if (!container) return;
+      const slideCount = container.children.length;
+
+      const updateSlider = () => {
+        container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (prevBtn) prevBtn.disabled = currentIndex === 0;
+        if (nextBtn) nextBtn.disabled = currentIndex === slideCount - 1;
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) currentIndex--;
+          updateSlider();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          if (currentIndex < slideCount - 1) currentIndex++;
+          updateSlider();
+        });
+      }
+
+      updateSlider();
+    }
+  }
+
+  customElements.define('image-slider', ImageSlider);
+</script>

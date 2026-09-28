@@ -1,6 +1,6 @@
 ---
 title: "Hydrovia - Smart Pipe Monitoring"
-description: "Industrial IoT (IIoT) system for monitoring water leakage using flow sensors, MQTT telemetry, and a Node-RED dashboard."
+description: "IoT system for monitoring water leakage using flow sensors, MQTT telemetry, and a Node-RED dashboard."
 tags: ["IoT", "ESP32", "MQTT", "Node-RED", "C++"]
 role: "Embedded System Engineer"
 period: "October 2025 - December 2025"
@@ -22,7 +22,7 @@ The system's core relies on an **ESP32 microcontroller** functioning as the main
 - **Actuators**: Automated control logic implemented for a water pump actuator to stop flow during leak detection.
 - **Electrical Design**: Designed electrical schematics and wiring on perfboards to safely distribute power. Implemented stable step-down modules to provide **12V** for the pump actuator and **5V** for the microcontroller and sensors.
 
-## Software & Networking (IIoT)
+## Software & Networking (IoT)
 To ensure reliable and fast data transmission suitable for industrial monitoring:
 - **MQTT Telemetry**: Configured lightweight MQTT data pipelines to stream real-time sensor metrics to the central server at precise 1-second intervals.
 - **Dashboard Visualization**: Built an interactive **Node-RED** dashboard to visualize daily volume metrics, display real-time status indicators, and provide remote valve override and data reset controls to the operators.

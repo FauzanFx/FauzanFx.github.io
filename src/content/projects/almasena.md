@@ -19,7 +19,7 @@ Almasena is an ROV built to discover underwater's environment using double camer
 ## Control Systems & Firmware
 To ensure smooth and precise maneuverability in aquatic environments:
 - **PID Control**: Designed and deployed 3 separate PID control loops for depth/ballast, pitch stabilization, and heading hold. This included implementing output clamping and integral anti-windup protection to prevent motor burnout.
-- **Hardware Integration**: Programmed Raspberry Pi and STM32 microcontrollers to generate PWM signals controlling 2 ESC (Electronic Speed Controller) units, ensuring accurate thrust response from the dual thrusters.
+- **Hardware Integration**: Programmed Raspberry Pi & STM32 microcontrollers and Configure Pixhawk to generate PWM signals controlling 4 ESC (Electronic Speed Controller) units, ensuring accurate thrust response from the thrusters.
 - **Onboard Control Loop**: Built a highly responsive 20 Hz onboard control loop integrating GCS (Ground Control Station) commands, sensor data, vision status, and failsafe logic.
 
 ## Communication Architecture
